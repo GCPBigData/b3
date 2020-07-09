@@ -1,0 +1,32 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f9cd7126ea1, pid=25623, tid=25677
+#
+# JRE version: OpenJDK Runtime Environment (13.0+13) (build 13+13-Ubuntu-0ubunt1)
+# Java VM: OpenJDK 64-Bit Server VM (13+13-Ubuntu-0ubunt1, mixed mode, sharing, tiered, compressed oops, g1 gc, linux-amd64)
+# Problematic frame:
+# C  [libjimage.so+0x2ea1]
+#
+# Core dump will be written. Default location: Core dumps may be processed with "/usr/share/apport/apport %p %s %c %d %P" (or dumping to /home/fred/dev/projetos/mult_broker_api/ApiGateway/core.25623)
+#
+# If you would like to submit a bug report, please visit:
+#   https://bugs.launchpad.net/ubuntu/+source/openjdk-13
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -agentlib:jdwp=transport=dt_socket,suspend=y,address=localhost:43971 -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=35145 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname=localhost -Dspring.jmx.enabled=true -Dspring.application.admin.enabled=true -Djava.security.egd=file:/dev/./urandom -Xverify:none -XX:TieredStopAtLevel=1 -Dspring.boot.project.name=ApiGateway -Dfile.encoding=UTF-8 developersd3.microservices.zuul.ApiGatewayApplication --spring.output.ansi.enabled=always
+
+Host: Intel(R) Core(TM) i7-8565U CPU @ 1.80GHz, 8 cores, 7G, Ubuntu 19.04
+Time: Wed Feb 26 22:57:26 2020 -03 elapsed time: 1301 seconds (0d 0h 21m 41s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f9c6c002000):  JavaThread "RMI TCP Connection(32)-127.0.0.1" daemon [_thread_in_vm, id=25677, stack(0x00007f9ca41df000,0x00007f9ca42e0000)]
+
+Stack: [0x00007f9ca41df000,0x00007f9ca42e0000],  sp=0x00007f9ca42da8a0,  free space=1006k
+Native frames: (J=compiled Java code, A=aot compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libjimage.so+0x2ea1]
+C  [libjimage.so+0x39ea]
+C  [libjimage.so+0x3eb5]

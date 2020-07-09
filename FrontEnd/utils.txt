@@ -1,0 +1,90 @@
+Host: Multbroker
+
+IP: 177.47.18.202 (ssh)
+
+IP de Backup: 10.11.16.90
+
+User: root
+
+Pass: h0fxeg5#$
+
+ 
+
+User: clearinvest
+
+Pass: rjj6hee$
+
+
+entrar no postgres clearinvest
+
+sudo -i -u postgres
+
+depois " psql "
+
+
+CREATE DATABASE multbroker;
+
+GRANT ALL PRIVILEGES ON DATABASE multbroker to multbroker;
+
+GRANT ALL PRIVILEGES ON SCHEMA multbroker to multbroker;
+
+ALTER USER postgres WITH PASSWORD 'debian23';
+
+
+service postgresql-10.service reload
+service postgresql-10.service restart
+service postgresql-10.service stop
+service postgresql-10.service status
+service postgresql-10.service start
+
+cd /var/lib/pgsql/10/data
+
+alterar o postgres.conf  e deixar o localadress="*"
+e alterar o pg_hba.conf e  deixar assim
+
+local	all	all	trust
+host	all	127.0.0.1/32	trust
+# TYPE DATABASE USER CIDR-ADDRESS  METHOD
+host  all  all 0.0.0.0/0 md5
+ no local >> cd /var/lib/pgsql/10/data
+
+CREATE SCHEMA multbroker;
+
+firewall-cmd --permanent --reload --zone=public --add-port=8010/tcp*
+
+COLOCAR PORTAS NO NGINX
+nano  /etc/nginx/conf.d/default.conf
+
+sudo systemctl restart nginx
+
+http://177.47.18.202:8080/comons/status/check
+2222
+
+	<repositories>
+		<repository>
+			<id>repositorio</id>
+			<name>Repositorio na Pasta Root</name>
+			<url>/root/.m2/repository/</url>
+		</repository>
+	</repositories>
+
+		<dependency>
+			<groupId>com.multbroker.comons</groupId>
+			<artifactId>comons</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<scope>compile</scope>
+		</dependency>
+
+ sudo netstat -plten |grep java
+
+tcp6       0      0 :::8080                 :::*                    LISTEN      
+1000       30070621    16085/java
+
+kill -9 16085
+
+
+sudo nano /etc/xinetd.d/telnet
+
+telnet email-ssl.com.br 25
+
+ACTIVATION KEY=88302142447623810845

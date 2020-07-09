@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title th:text="#{email.activation.title}">JHipster activation</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="shortcut icon" th:href="@{|${baseUrl}/favicon.ico|}" />
+    </head>
+    <body>
+        <p>
+            Prezado(a)
+        </p>
+        <p>
+			Sua conta na Mult3 foi criada, por favor clique na URL abaixo para ativa-la:        </p>
+        <p>
+            <a th:with="url=(@{|${baseUrl}${user.activationKey}|})" th:href="${url}"
+            th:text="${url}">Link de Ativacao</a>
+        </p>
+        <p>
+            <span>Obrigado,</span>
+            <br/>
+            <em>Mult3</em>
+        </p>
+    </body>
+</html>

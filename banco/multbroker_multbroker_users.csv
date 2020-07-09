@@ -1,0 +1,6 @@
+id,activated,activation_key,cpf,email,password_hash,image_url,lang_key,nome_completo,reset_date,reset_key
+4,true,49979924194635632103,,ivelise.pinheiro@hotmail.com,$2a$10$XJvgn/u6xNFDEmj9GdqbE.NeCQrf0SLp2UnENI.TtaCZz3scYYTfe,http://,pt-br,Ivelise Granado,2020-04-03 08:06:22.222000,11178027881316443504
+2,true,67099413408609538126,000000000,luiz@gmail.com,$2a$10$rIUrHY4XpvxWLlvlf1TFwOdkZcHy04UZbCpUdifs/45qDawC0mIEG,http://,pt-br,Luiz,2020-04-02 01:04:10.188000,66481411268776411097
+3,true,20835886809536454710,,luis.granado@mult3.com.br,$2a$10$IfV35mqiEUQB/9tN3u17yevm7kv8JclZy.YBBISvWL6wcXKBLDlWK,http://,pt-br,Luis Fernando Granado,2020-04-02 22:39:03.502000,87641342472607199821
+6,true,54113749391670656703,,luis.granado@hotmail.com,$2a$10$PMbuMwgOcsAXnTuuyfT0rOtwjytSzdxM0QubsuhlC0GLVf5qroP5m,http://,pt-br,Luis,2020-04-08 00:18:22.278000,54480413490857281698
+5,true,28859208891480880099,,dfredmota@gmail.com,$2a$10$yLrqSGZ5rrp8Al4Ry2SEK.rGP8Jme8mKZvbIVWYdnkS9x1wQtztXC,http://,pt-br,Fred Mota,2020-04-04 00:34:07.128000,37741241283743040864
